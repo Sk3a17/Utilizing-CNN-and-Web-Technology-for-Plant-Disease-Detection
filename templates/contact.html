@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Multi-Crop Disease Detection</title>
+</head>
+
+<body>
+    <div class="title">
+        <span class="material-symbols-outlined grass">grass</span>
+        Multi-Crop Disease Detection System
+        <span class="material-symbols-outlined grass">grass</span>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('code') }}">Code</a></li>
+            <li><a href="{{ url_for('contact') }}">ContactUs</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/submit_contact_form" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Phone: +91 7827196011</p>
+            <p>Email: shikharkumarxyz@gmail.com</p>
+        </div>
+    </div>
+</body>
+
+</html>

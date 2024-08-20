@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Multi-Crop Disease Detection</title>
+</head>
+
+<body>
+    <div class="title">
+        <span class="material-symbols-outlined grass">grass</span>
+        Multi-Crop Disease Detection System
+        <span class="material-symbols-outlined grass">grass</span>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('code') }}">Code</a></li>
+            <li><a href="{{ url_for('contact') }}">ContactUs</a></li>
+        </ul>
+    </div>
+    <div class="symptoms">
+        <div class="about3">
+            <h3>Symptoms and Prevention</h3>
+            <div class="disease-info">
+                <h2>Apple Scab</h2>
+                <p><strong>Symptoms:</strong> Dark, scabby spots on leaves and fruit, causing them to become deformed.
+                </p>
+                <p><strong>Prevention:</strong> Apply fungicides early in the growing season, remove infected leaves,
+                    and maintain good air circulation around the trees.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Apple Black Rot</h2>
+                <p><strong>Symptoms:</strong> Brownish-black lesions on fruit, causing them to shrivel and become
+                    mummified.</p>
+                <p><strong>Prevention:</strong> Remove infected fruit, prune trees to improve air circulation, and apply
+                    fungicides during the growing season.</p>
+            </div>
+
+            <!-- Repeat the structure for each disease -->
+
+            <div class="disease-info">
+                <h2>Apple Cedar Apple Rust</h2>
+                <p><strong>Symptoms:</strong> Yellow or orange spots on leaves, often with a powdery appearance; may
+                    cause premature leaf drop.</p>
+                <p><strong>Prevention:</strong> Remove nearby juniper trees (alternate host), apply fungicides, and
+                    practice good garden hygiene.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Apple Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Grape Black Measles</h2>
+                <p><strong>Symptoms:</strong> Black, angular spots on leaves, which may also appear on fruit and stems;
+                    can lead to defoliation and reduced yield.</p>
+                <p><strong>Prevention:</strong> Plant disease-resistant grape varieties, prune to improve air
+                    circulation, and apply fungicides preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Grape Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <!-- Repeat the structure for each grape disease -->
+
+            <div class="disease-info">
+                <h2>Grape Leaf Blight</h2>
+                <p><strong>Symptoms:</strong> Brown or reddish-brown spots on leaves, which may expand and lead to leaf
+                    death; can affect yield and quality.</p>
+                <p><strong>Prevention:</strong> Remove and destroy infected plant material, practice good garden
+                    hygiene, and apply fungicides as needed.</p>
+            </div>
+            <div class="sub1">
+
+            <div class="disease-info">
+                <h2>Cotton Army Worm</h2>
+                <p><strong>Symptoms:</strong> Large numbers of armyworms feeding on cotton leaves, leading to
+                    skeletonized leaves and reduced yield.</p>
+                <p><strong>Prevention:</strong> Monitor fields regularly, use integrated pest management practices, and
+                    apply insecticides when necessary.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Cotton Bacterial Blight</h2>
+                <p><strong>Symptoms:</strong> Water-soaked lesions on cotton leaves, which may expand and become
+                    necrotic; can lead to defoliation and yield loss.</p>
+                <p><strong>Prevention:</strong> Use disease-resistant cotton varieties, practice crop rotation, and
+                    manage irrigation to reduce leaf wetness.</p>
+            </div>
+
+            <!-- Repeat the structure for each disease -->
+
+            <div class="disease-info">
+                <h2>Cotton Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Cotton Target Spot</h2>
+                <p><strong>Symptoms:</strong> Circular lesions with a target-like appearance on cotton leaves, leading
+                    to defoliation and reduced yield.</p>
+                <p><strong>Prevention:</strong> Practice crop rotation, remove crop debris, and apply fungicides
+                    preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Potato Early Blight</h2>
+                <p><strong>Symptoms:</strong> Dark brown lesions with concentric rings on potato leaves, leading to leaf
+                    yellowing and defoliation.</p>
+                <p><strong>Prevention:</strong> Plant disease-resistant potato varieties, practice crop rotation, and
+                    apply fungicides preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Potato Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <!-- Repeat the structure for each disease -->
+
+            <div class="disease-info">
+                <h2>Potato Late Blight</h2>
+                <p><strong>Symptoms:</strong> Water-soaked lesions on potato leaves, which may turn dark and lead to
+                    rapid defoliation; can affect tubers and cause yield loss.</p>
+                <p><strong>Prevention:</strong> Monitor fields regularly, practice good garden hygiene, and apply
+                    fungicides preventively, especially during periods of high humidity.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Sugarcane Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Sugarcane Red Rot</h2>
+                <p><strong>Symptoms:</strong> Internal reddish-brown discoloration of sugarcane stalks, leading to
+                    rotting and collapse of the plant.</p>
+                <p><strong>Prevention:</strong> Use disease-free seed cane, practice crop rotation, and manage
+                    waterlogged conditions to reduce disease incidence.</p>
+            </div>
+
+            <!-- Repeat the structure for each disease -->
+
+            <div class="disease-info">
+                <h2>Sugarcane Rust</h2>
+                <p><strong>Symptoms:</strong> Orange or yellowish powdery lesions on sugarcane leaves, leading to
+                    reduced photosynthesis and yield loss.</p>
+                <p><strong>Prevention:</strong> Plant disease-resistant sugarcane varieties, practice good field
+                    sanitation, and apply fungicides preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Sugarcane Yellow Leaf Syndrome</h2>
+                <p><strong>Symptoms:</strong> Yellowing of sugarcane leaves, often accompanied by stunted growth and
+                    reduced yield.</p>
+                <p><strong>Prevention:</strong> Practice proper nutrient management, control pests that may vector the
+                    disease, and maintain optimal soil and environmental conditions.</p>
+            </div>
+
+        </div>
+
+            <div class="disease-info">
+                <h2>Tomato Early Blight</h2>
+                <p><strong>Symptoms:</strong> Dark brown lesions with concentric rings on tomato leaves, leading to leaf
+                    yellowing and defoliation.</p>
+                <p><strong>Prevention:</strong> Rotate crops, space plants adequately for good air circulation, and
+                    apply fungicides preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Tomato Healthy</h2>
+                <p>No symptoms observed as the plant is healthy.</p>
+                <p>No specific prevention measures are required.</p>
+            </div>
+
+            <!-- Repeat the structure for each disease -->
+
+            <div class="disease-info">
+                <h2>Tomato Late Blight</h2>
+                <p><strong>Symptoms:</strong> Water-soaked lesions on tomato leaves, which may turn dark and lead to
+                    rapid defoliation; can affect fruit and cause yield loss.</p>
+                <p><strong>Prevention:</strong> Practice good garden hygiene, apply fungicides preventively, and avoid
+                    overhead irrigation to reduce leaf wetness.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Tomato Leaf Mold</h2>
+                <p><strong>Symptoms:</strong> Pale yellow or brown patches on tomato leaves, often with fuzzy white or
+                    gray mold growth on the underside.</p>
+                <p><strong>Prevention:</strong> Provide good air circulation, avoid overhead watering, and use
+                    disease-resistant tomato varieties.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Tomato Mosaic Virus</h2>
+                <p><strong>Symptoms:</strong> Mottled or streaked patterns on tomato leaves, stunted growth, and
+                    distorted fruit; can spread rapidly in warm weather.</p>
+                <p><strong>Prevention:</strong> Use virus-free seedlings, control aphids (vectors of the virus), and
+                    practice good garden sanitation.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Tomato Target Spot</h2>
+                <p><strong>Symptoms:</strong> Circular lesions with concentric rings on tomato leaves, leading to leaf
+                    yellowing and defoliation.</p>
+                <p><strong>Prevention:</strong> Rotate crops, remove and destroy infected plant material, and apply
+                    fungicides preventively.</p>
+            </div>
+
+            <div class="disease-info">
+                <h2>Tomato Yellow Leaf Curl Virus</h2>
+                <p><strong>Symptoms:</strong> Yellowing and upward curling of tomato leaves, stunted growth, and reduced
+                    fruit yield.</p>
+                <p><strong>Prevention:</strong> Use virus-resistant tomato varieties, control whiteflies (vectors of the
+                    virus), and remove infected plants promptly.</p>
+            </div>
+
+        </div>
+        <div class="about2"><h2>About</h2>
+            <p>
+                Crop diseases globally threaten agricultural productivity and food security significantly. To counter
+                these threats, advanced technological solutions are essential. This is an approach for
+                multi-crop disease detection using Convolutional Neural Networks (CNNs) implemented with web
+                technology, aiming to enhance precision agriculture practices. Leveraging the power of deep learning,
+                our work offers a scalable and efficient solution for identifying diseases across various crops. The
+                web-based implementation ensures accessibility and ease of use for farmers and agricultural
+                stakeholders. The motivation for developing a multi-crop disease detection system using CNNs and web
+                technology lies in addressing pressing challenges such as agricultural productivity, food security,
+                limited diagnostic capabilities, and the opportunities presented by technological advancements in AI and
+                web development. This will provide farmers with timely insights to manage and control outbreaks,
+                ultimately contributing to improved crop yields and sustainable agricultural practices. Our model
+                achieves an accuracy of 94.45% on dataset comprises 25 classes of crop diseases, with a total of 5800
+                images sourced from publicly available repositories on Kaggle. Leveraging the power of deep learning,
+                our CNN model is trained on this diverse dataset to accurately identify disease patterns across
+                various crops. The integration of web technology facilitates the deployment of our solution online,
+                ensuring accessibility and ease of use for farmers and agricultural stakeholders.</p>
+        </div>
+        
+
+    </div>
+
+</body>
+
+</html>

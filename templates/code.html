@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Multi-Crop Disease Detection</title>
+</head>
+
+<body>
+    <div class="title">
+        <span class="material-symbols-outlined grass">grass</span>
+        Multi-Crop Disease Detection System
+        <span class="material-symbols-outlined grass">grass</span>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('code') }}">Code</a></li>
+            <li><a href="{{ url_for('contact') }}">ContactUs</a></li>
+        </ul>
+    </div>
+    <div class="code">
+        <div class="imgp">
+            <figure><img src="static/images/classCount.png" alt="Class Distribution " class="img1">
+                <figcaption>Class Distribution in Dataset.</figcaption>
+            </figure>
+            <figure> <img src="static/images/cf80.png" alt="Confusion Matrix" class="img2">
+                <figcaption>Confusion Matrix</figcaption>
+            </figure>
+            <figure> <img src="static/images/epoch20.png" alt="Epoch 20 " class="img3">
+                <figcaption>Model Performance on 20 Epoch</figcaption>
+            </figure>
+            <figure> <img src="static/images/epoch40.png" alt="Epoch 40 " class="img4">
+                <figcaption>Model Performance on 40 Epoch</figcaption>
+            </figure>
+            <figure> <img src="static/images/epoch50.png" alt="Epoch 50" class="img5">
+                <figcaption>Model Performance on 50 Epoch</figcaption>
+            </figure>
+            <figure> <img src="static/images/epoch80.png" alt="Epoch 80" class="img6">
+                <figcaption>Model Performance on 80 Epoch</figcaption>
+            </figure>
+
+        </div>
+        <div class="dataOverview">
+            <h1>Dataset Overview</h1>
+            <p> The Dataset comprises images of various plant leaves affected by different diseases and conditions. It
+                is sourced from Kaggle and falls under the public domain, facilitating widespread use for research and
+                educational purposes. The dataset is organized into 25 classes, each representing a specific plant
+                disease or health condition. In total, there are 5800 images across all classes. To ensure balanced
+                representation, efforts have been made to maintain an equal number of images per class. Each class
+                consists of approximately 200 to 250 images, providing a diverse and comprehensive dataset for training
+                and testing our model.</p>
+            <figure> <img src="static/images/modelS.png" alt="CNN" class="imgcnn">
+                <figcaption>CNN Architecture</figcaption>
+            </figure>
+            <div class="cnn">
+                <div class="section">
+                    <h2>1. Resize and Rescale</h2>
+                    <p>This preprocessing layer resizes input images to the specified size (256x256) and rescales pixel
+                        values to the range [0,1].</p>
+                </div>
+
+                <div class="section">
+                    <h2>2. Conv2D (Convolutional Layer 1)</h2>
+                    <p>The first convolutional layer applies 32 filters of size 3x3 to the input images. Each filter
+                        convolves across the input image, extracting local patterns and features. ReLU activation
+                        function introduces non-linearity to the outputs.</p>
+                    <ul>
+                        <li>Filters: 32 filters of size 3x3</li>
+                        <li>Activation Function: ReLU</li>
+                        <li>Output Size: Depends on input size and padding</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>3. MaxPooling2D (Max Pooling Layer 1)</h2>
+                    <p>Max pooling with a 2x2 pool size and stride of 2 downsamples the feature maps by half in each
+                        spatial dimension. This reduces computational load while preserving significant features.</p>
+                    <ul>
+                        <li>Pool Size: 2x2</li>
+                        <li>Stride: 2</li>
+                        <li>Output Size: Half the size of input in each dimension (128x128)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>4. Conv2D (Convolutional Layer 2)</h2>
+                    <p>The second convolutional layer applies 64 filters of size 3x3 to the feature maps generated by
+                        the previous layer, capturing more complex patterns.</p>
+                    <ul>
+                        <li>Filters: 64 filters of size 3x3</li>
+                        <li>Activation Function: ReLU</li>
+                        <li>Output Size: Depends on input size and padding</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>5. MaxPooling2D (Max Pooling Layer 2)</h2>
+                    <p>Similar to the initial max pooling layer, this one also uses a 2x2 pool size and a stride of 2 to
+                        further reduce the spatial dimensions of the feature maps.</p>
+                    <ul>
+                        <li>Pool Size: 2x2</li>
+                        <li>Stride: 2</li>
+                        <li>Output Size: Half the size of input in each dimension (64x64)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>6. Conv2D (Convolutional Layers 3-6)</h2>
+                    <p>Additional convolutional layers with 64 filters of size 3x3 and ReLU activation functions,
+                        followed by max pooling layers, progressively extract deeper features from the input images.</p>
+                    <ul>
+                        <li>Filters: 64 filters of size 3x3</li>
+                        <li>Activation Function: ReLU</li>
+                        <li>Output Size: Depends on input size and padding</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>7. Flatten Layer</h2>
+                    <p>The flatten layer reshapes the 3D feature maps into a 1D vector, preparing the data for
+                        processing by fully connected layers.</p>
+                </div>
+
+                <div class="section">
+                    <h2>8. Dense (Fully Connected) Layer 1</h2>
+                    <p>A dense layer with 64 neurons applies complete connectivity between neurons, facilitating feature
+                        combination and extracting high-level representations.</p>
+                    <ul>
+                        <li>Neurons: 64</li>
+                        <li>Activation Function: ReLU</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>9. Dense (Fully Connected) Layer 2 (Output Layer)</h2>
+                    <p>The output layer consists of 25 neurons, one for each class in the classification task. The
+                        softmax activation function produces probability distributions across the classes, enabling the
+                        network to make predictions.</p>
+                    <ul>
+                        <li>Neurons: 25 (one for each class)</li>
+                        <li>Activation Function: Softmax</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
